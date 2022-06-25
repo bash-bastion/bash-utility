@@ -13,36 +13,17 @@ std.find_parent_dir() {
 	std.util.find_parent -d "$1"
 }
 
-# @description Determine if color should be printed. Note that this doesn't
-# use tput because simple environment variable checking heuristics suffice
-std.should_output_color() {
-	# https://no-color.org
-	if [ ${NO_COLOR+x} ]; then
-		return 1
-	fi
 
-	# FIXME
-	# # 0 => 2 colors
-	# # 1 => 16 colors
-	# # 2 => 256 colors
-	# # 3 => 16,777,216 colors
-	# if [[ -v FORCE_COLOR ]]; then
-	# 	return 0
-	# fi
+# @description Determine if color should be printed to standard output
+# @noargs
+std.should_print_color_stdout() {
+	std.private.should_print_color 1
+}
 
-	if [ "$COLORTERM" = "truecolor" ] || [ "$COLORTERM" = "24bit" ]; then
-		return 0
-	fi
-
-	if [ "$TERM" = 'dumb' ]; then
-		return 1
-	fi
-
-	if [ -t 0 ]; then
-		return 0
-	fi
-
-	return 1
+# @description Determine if color should be printed to standard error
+# @noargs
+std.should_print_color_stderr() {
+	std.private.should_print_color 2
 }
 
 # @description Gets information from a particular package. If the key does not exist, then the value

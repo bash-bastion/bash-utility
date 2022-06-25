@@ -20,3 +20,17 @@ std.find_parent() {
 		panic 'Failed to cd'
 	fi
 }
+
+std.private.should_print_color() {
+	local fd="$1"
+
+	if [[ ${NO_COLOR+x} || "$TERM" = 'dumb' ]]; then
+		return 1
+	fi
+
+	if [ -t "$fd" ]; then
+		return 0
+	fi
+
+	return 1
+}
