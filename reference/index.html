@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Edwin Kofler" /><link rel="canonical" href="https://hyperupcall.github.io/bash-std/reference/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Reference - bash-std</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Reference";
+        var mkdocs_page_input_path = "reference.md";
+        var mkdocs_page_url = "/bash-std/reference/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> bash-std
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">bash-std</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#stdfind_parent_file">std.find_parent_file()</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stdfind_parent_dir">std.find_parent_dir()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stdshould_output_color">std.should_output_color()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stdget_package_info">std.get_package_info()</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#variables-set">Variables set</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">bash-std</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Reference</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/hyperupcall/bash-std/edit/main/docs/reference.md"
+          class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="index">Index</h2>
+<ul>
+<li><a href="#stdfind_parent_file">std.find_parent_file()</a></li>
+<li><a href="#stdfind_parent_dir">std.find_parent_dir()</a></li>
+<li><a href="#stdshould_output_color">std.should_output_color()</a></li>
+<li><a href="#stdget_package_info">std.get_package_info()</a></li>
+</ul>
+<h3 id="stdfind_parent_file">std.find_parent_file()</h3>
+<p>Finds a parent file</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><strong>$1</strong> (File): name</li>
+</ul>
+<h3 id="stdfind_parent_dir">std.find_parent_dir()</h3>
+<p>Finds a parent directory</p>
+<h3 id="stdshould_output_color">std.should_output_color()</h3>
+<p>Determine if color should be printed. Note that this doesn't
+use tput because simple environment variable checking heuristics suffice</p>
+<h3 id="stdget_package_info">std.get_package_info()</h3>
+<p>Gets information from a particular package. If the key does not exist, then the value
+is an empty string</p>
+<h4 id="arguments_1">Arguments</h4>
+<ul>
+<li><strong>$1</strong> (string): The <code>$BASALT_PACKAGE_DIR</code> of the caller</li>
+</ul>
+<h4 id="variables-set">Variables set</h4>
+<ul>
+<li><strong>directory</strong> (string): The full path to the directory</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="bash-std"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Edwin Kofler</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/hyperupcall/bash-std" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
