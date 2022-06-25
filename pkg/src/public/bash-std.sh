@@ -68,3 +68,4 @@ std.get_package_info() {
 		fi
 	done < "$toml_file"; unset -v line
 }
+
