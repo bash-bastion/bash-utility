@@ -9,7 +9,7 @@ description = 'Standard Bash functions'
 [run]
 dependencies = []
 binDirs = []
-sourceDirs = []
+sourceDirs = ['pkg/src/public', 'pkg/src/util' ]
 builtinDirs = []
 completionDirs = []
 manDirs = []
