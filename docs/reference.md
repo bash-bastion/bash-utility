@@ -8,6 +8,7 @@
 * [std.should_print_color_stdout()](#stdshould_print_color_stdout)
 * [std.should_print_color_stderr()](#stdshould_print_color_stderr)
 * [std.get_package_info()](#stdget_package_info)
+* [std.get_semver()](#stdget_semver)
 
 ### std.fprint_error()
 
@@ -72,4 +73,14 @@ is an empty string
 #### Variables set
 
 * **directory** (string): The full path to the directory
+
+### std.get_semver()
+
+#### Variables set
+
+* **REPLY[major]** (string): Major number
+* **REPLY[minor]** (string): Minor number
+* **REPLY[patch]** (string): Patch number
+* **REPLY[prerelease]** (string): Prerelease number
+* **REPLY[buildmetadata]** (string): Build metadata
 

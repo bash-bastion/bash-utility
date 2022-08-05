@@ -92,3 +92,36 @@ std.get_package_info() {
 	done < "$toml_file"; unset -v line
 }
 
+# @set REPLY[major] string Major number
+# @set REPLY[minor] string Minor number
+# @set REPLY[patch] string Patch number
+# @set REPLY[prerelease] string Prerelease number
+# @set REPLY[buildmetadata] string Build metadata
+std.get_semver() {
+	unset -v REPLY
+	declare -Ag REPLY=()
+
+	local version_string="$1"
+	
+	local major="${version_string%%.*}"
+	local minor="${version_string#*.}"; minor=${minor%%.*}
+	local patch="${version_string#*.}"; patch=${patch#*.}; patch=${patch%%-*}
+	local prerelease="${version_string#*-}"; prerelease=${prerelease%+*}
+	local buildmetadata="${version_string#*+}"
+
+	local variable_name=
+	for variable_name in major minor patch prerelease buildmetadata; do
+		local -n variable="$variable_name"
+
+		if [ "$variable" = "$version_string" ]; then
+			variable=
+		fi
+	done; unset -v variable_name
+	unset -nv variables
+
+	REPLY[major]=$major
+	REPLY[minor]=$minor
+	REPLY[patch]=$patch
+	REPLY[prerelease]=$prerelease
+	REPLY[buildmetadata]=$buildmetadata
+}
