@@ -1,6 +1,6 @@
-# bash-std
+# bash-utility
 
-A standard library for Bash
+A standard utility library for Bash (previously `bash-std`)
 
 Includes useful functions that don't belong in [bash-core](https://github.com/hyperupcall/bash-core)
 
