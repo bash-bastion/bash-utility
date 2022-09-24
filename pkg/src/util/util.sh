@@ -34,3 +34,19 @@ utility.private.should_print_color() {
 
 	return 1
 }
+
+utility.private.xdg_get() {
+	unset REPLY; REPLY=
+
+	local env_variable="$1"
+	local default_value="$2"
+
+	# Use the default value of the environment variable if:
+	# - it is unset/empty (handled by the callee)
+	# - not an absolute path
+	if [ "${env_variable::1}" != '/' ]; then
+		REPLY="$default_value"
+	else
+		REPLY="$env_variable"
+	fi
+}
