@@ -5,4 +5,4 @@ for f in ./pkg/src/{public,util}/*.sh; do
 	source "$f"
 done; unset -v f
 
-std.fprint_info 'hookah' 'other'
+utility.fprint_info 'hookah' 'other'

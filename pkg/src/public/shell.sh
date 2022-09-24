@@ -1,7 +1,7 @@
 # shellcheck shell=bash
 
 
-std.shell_variable_assignment() {
+utility.shell_variable_assignment() {
 	local variable="$1"
 	local value="$2"
 
@@ -15,7 +15,7 @@ std.shell_variable_assignment() {
 	esac
 }
 
-std.shell_variable_export() {
+utility.shell_variable_export() {
 	local variable="$1"
 
 	case $shell in
@@ -28,7 +28,7 @@ std.shell_variable_export() {
 	esac
 }
 
-std.shell_path_prepend() {
+utility.shell_path_prepend() {
 	local value="$1"
 
 	case $shell in
@@ -46,7 +46,7 @@ esac"
 	esac
 }
 
-std.shell_register_completion() {
+utility.shell_register_completion() {
 	local dir="$1"
 	local name="$2"
 
@@ -67,7 +67,7 @@ std.shell_register_completion() {
 	esac
 }
 
-std.shell_register_completions() {
+utility.shell_register_completions() {
 	local dir="$1"
 
 	case $shell in
@@ -98,7 +98,7 @@ fi"
 	esac
 }
 
-std.shell_source() {
+utility.shell_source() {
 	local dir="$1"
 	local file="$2"
 

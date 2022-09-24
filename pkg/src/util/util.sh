@@ -1,6 +1,6 @@
 # shellcheck shell=bash
 
-std.find_parent() {
+utility.find_parent() {
 	# shellcheck disable=SC1007
 	local op="$1"
 	local file="$2"
@@ -21,7 +21,7 @@ std.find_parent() {
 	fi
 }
 
-std.private.should_print_color() {
+utility.private.should_print_color() {
 	local fd="$1"
 
 	if [[ ${NO_COLOR+x} || "$TERM" = 'dumb' ]]; then

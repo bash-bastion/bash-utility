@@ -7,7 +7,7 @@ basalt.package-load
 
 load './util/test_util.sh'
 
-load "$BASALT_PACKAGE_DIR/pkg/src/bin/bash-std.sh"
+load "$BASALT_PACKAGE_DIR/pkg/src/bin/bash-utility.sh"
 bash-std() { main.bash-std "$@"; }
 
 export NO_COLOR=
