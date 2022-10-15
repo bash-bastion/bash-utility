@@ -1,0 +1,9 @@
+[project]
+ecosystem = 'basalt'
+form = 'lib'
+for = 'anyone'
+status = 'experimental'
+
+[discovery]
+categories = []
+tags = []
