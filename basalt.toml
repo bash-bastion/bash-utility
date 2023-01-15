@@ -2,7 +2,7 @@
 type = 'bash'
 name = 'bash-std'
 slug = 'std'
-version = '0.3.0'
+version = '0.4.0'
 authors = ['Edwin Kofler <edwin@kofler.dev>']
 description = 'Standard Bash functions'
 
