@@ -71,13 +71,13 @@ utility.find_parent_dir() {
 # @description Determine if color should be printed to standard output
 # @noargs
 utility.should_print_color_stdout() {
-	utility.private.should_print_color 1
+	utility._should_print_color 1
 }
 
 # @description Determine if color should be printed to standard error
 # @noargs
 utility.should_print_color_stderr() {
-	utility.private.should_print_color 2
+	utility._should_print_color 2
 }
 
 # @description Gets information from a particular package. If the key does not exist, then the value

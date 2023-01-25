@@ -21,7 +21,7 @@ utility.find_parent() {
 	fi
 }
 
-utility.private.should_print_color() {
+utility._should_print_color() {
 	local fd="$1"
 
 	if [[ ${NO_COLOR+x} || "$TERM" = 'dumb' ]]; then
@@ -35,7 +35,7 @@ utility.private.should_print_color() {
 	return 1
 }
 
-utility.private.xdg_get() {
+utility._xdg_get() {
 	unset REPLY; REPLY=
 
 	local env_variable="$1"
