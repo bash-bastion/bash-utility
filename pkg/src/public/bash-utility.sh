@@ -14,7 +14,7 @@ utility.fprint_error () {
 	fi
 }
 
-# @description Prints a formated warning message
+# @description Prints a formatted warning message
 # @arg $1 name of package
 # @arg $2 message
 utility.fprint_warn () {
@@ -28,7 +28,7 @@ utility.fprint_warn () {
 	fi
 }
 
-# @description Prints a formated log message
+# @description Prints a formatted log message
 # @arg $1 name of package
 # @arg $2 message
 utility.fprint_info () {

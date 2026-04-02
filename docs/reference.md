@@ -21,7 +21,7 @@ Prints a formatted error message
 
 ### utility.fprint_warn()
 
-Prints a formated warning message
+Prints a formatted warning message
 
 #### Arguments
 
@@ -30,7 +30,7 @@ Prints a formated warning message
 
 ### utility.fprint_info()
 
-Prints a formated log message
+Prints a formatted log message
 
 #### Arguments
 
@@ -83,4 +83,3 @@ is an empty string
 * **REPLY[patch]** (string): Patch number
 * **REPLY[prerelease]** (string): Prerelease number
 * **REPLY[buildmetadata]** (string): Build metadata
-
